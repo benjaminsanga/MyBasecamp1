@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if !logged_in? || !@user
+    if !logged_in? || !current_user
       redirect_to root_path
     end
   end
