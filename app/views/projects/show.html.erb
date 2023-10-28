@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="row mx-3">
+  <div class="col-md-4">
+    <p style="color: green"><%= notice %></p>
 
-<%= render @project %>
-
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
-
-  <%= button_to "Destroy this project", @project, method: :delete %>
+    <%= render @project %>
+    
+    <div>
+      <%= link_to "Edit this project", edit_project_path(@project), class: 'text-decoration-none' %> |
+      <%= link_to "Back to projects", projects_path, class: 'text-decoration-none' %><br>
+    
+      <%= button_to "Destroy this project", @project, method: :delete, class: 'btn btn-sm btn-danger' %>
+    </div>
+  </div>
+  <div class="col-md-8">
+  </div>
 </div>

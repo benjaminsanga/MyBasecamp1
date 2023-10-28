@@ -1,3 +1,9 @@
-<h1>Welcome <%= current_user.username %></h1>
-<%= link_to "Edit Account", edit_user_path(current_user) %>
-<%= link_to "Delete Account", current_user, data: { confirm: "Are you sure?" }, method: :delete %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Welcome, <span class="text-success"><%= current_user.username %></span></h1>
+      <%= link_to "Edit Account", edit_user_path(current_user), class: 'text-decoration-none' %>
+      <%= link_to "Delete Account", current_user, data: { confirm: "Are you sure?" }, method: :delete, class: 'text-decoration-none' %>
+    </div>
+  </div>
+</div>
